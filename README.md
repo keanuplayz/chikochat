@@ -1,2 +1,3 @@
-# chikomail
-Repository containing source code for ChikoMail.
+# chikochat
+
+Repository containing source code for ChikoChat.

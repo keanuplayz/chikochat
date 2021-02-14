@@ -1,0 +1,27 @@
+{
+  "name": "chikochat",
+  "version": "1.0.0",
+  "description": "Video chat application using WebRTC.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keanuplayz/chikochat.git"
+  },
+  "keywords": [
+    "webrtc",
+    "video-chat"
+  ],
+  "author": "Keanu Timmermans",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/keanuplayz/chikochat/issues"
+  },
+  "homepage": "https://github.com/keanuplayz/chikochat#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^1.2.0"
+  }
+}
