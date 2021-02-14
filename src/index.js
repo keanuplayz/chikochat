@@ -22,3 +22,18 @@ app.get('/', (req, res) => {
 var server = http.createServer(app);
 // ...and start it. There's a choice to listen to a user-provided port, or the default port 8000.
 server.listen(process.env.PORT || 8000);
+
+/* Start SocketIO related stuff. */
+var io = socketIO(server);
+
+// As soon as the client connects to this socket, the `connection` event is fired.
+io.sockets.on('connection', (socket) => {
+  // Utility function to log server messages on the client.
+  // `arguments` is an array-like object which contains all arguments of log().
+  // To push all arguments of log() in that array to our `message` array, all we have to use is apply().
+  function log() {
+    var message = ['Message from server:'];
+    array.push.apply(message, arguments);
+    socket.emit('log', message);
+  }
+});
